@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCIP 2025 Conference</title>
+    <link rel="shortcut icon" href="/neu.ico">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            background: #f8f9fa;
+        }
+
+        .hero-banner {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            width: 90%;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin: 30px 0;
+            font-size: 28px;
+        }
+
+        /* .chair-title{
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 25px;
+            margin: 30px 0;
+            font-size: 22px;
+        } */
+        .chair-title {
+            color: var(--primary-color);
+            padding-left: 40px;
+            margin: 30px 0;
+            font-size: 22px;
+            position: relative;
+        }
+
+        .chair-title::before {
+            content: "•";  /* 可以换成其他符号 */
+            color: var(--accent-color);  /* 设置符号颜色 */
+            font-size: 60px;  /* 调整符号大小 */
+            position: absolute;
+            left: 0;
+            top: 25%;
+            transform: translateY(-50%);  /* 使符号垂直居中 */
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .committee-list {
+            columns: 2;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .committee-list li {
+            margin-bottom: 15px;
+            break-inside: avoid;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .committee-list {
+                columns: 1;
+            }
+            
+            .hero-text h1 {
+                font-size: 24px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+
+            .chair-title{
+                font-size: 18px;
+            }
+        }
+
+        .committee-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .committee-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .member-card {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .member-card img {
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .member-info {
+            line-height: 1.6;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1200px) {
+            .member-card {
+                width: 240px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .committee-row {
+                gap: 15px;
+            }
+            
+            .member-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-banner">
+        <img src="image/shenyang.jpg" alt="Shenyang City View" style="width:100%; height:auto; min-height:350px;">
+        <div class="hero-text">
+            <h1 style="font-size: 36px; margin-bottom: 20px;">International Conference on Intelligent Systems for Complex Industrial Processes</h1>
+            <p style="font-size: 24px;">Shenyang, Liaoning, China | June 28-29, 2025</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section class="content-card">
+            <h2 class="section-title">Welcome</h2>
+            <p style="text-align: justify; margin-right: 30pt;">The 1st International Conference on Intelligent Systems for Complex Industrial Processes will be held on June 28–29, 2025, in the historic city of Shenyang—known as “the birthplace of one imperial lineage and the capital of two dynasties.” by the State Key Laboratory of Comprehensive Automation for Process Industries at Northeastern University to advance the integrated development of automation and intelligence. More than 60 renowned experts and scholars from 17 countries and regions—including the United States, Canada, and the United Kingdom—have been invited (among them over 10 academicians, and more than 30 IEEE Fellows and IFAC Fellows).</p>
+        </section>
+
+        <section class="content-card">
+            <h2 class="section-title">Conference Topics</h2>
+            <ul>
+                <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;"><strong>Industrial process intelligent sensing and modeling</strong></li>
+                <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;"><strong>Computational intelligence</strong></li>
+                <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;"><strong>AI-driven cooperative autonomous control</strong></li>
+                <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;"><strong>AI-driven industrial process operational optimal decision-making</strong></li>
+                <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;"><strong>AI-driven abnormal situation monitoring and prediction</strong></li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2 class="section-title">Organizing Committee</h2>
+            <div class="committee-grid">
+                <!-- General Chair -->
+                <h3 class="chair-title">General Chair:</h3>
+                <div class="committee-row">
+                    <div class="member-card">
+                        <img src="image/chaitianyou.jpg" alt="Tianyou Chai" width="120" height="160">
+                        <div class="member-info">
+                            <!-- <strong>General Chair:</strong><br> -->
+                            Tianyou Chai, <br>China
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- General Co-Chairs -->
+                <h3 class="chair-title">General Co-Chairs:</h3>
+                <div class="committee-row">
+                    <div class="member-card">
+                        <img src="image/shiyang.jpg" alt="Yang Shi" width="120" height="160">
+                        <div class="member-info">
+                            <!-- <strong>General Co-Chairs:</strong><br> -->
+                            Yang Shi, <br>Canada
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他职位按照相同格式添加 -->
+            </div>
+        </section>
+        
+        <section class="content-card">
+            <h2 class="section-title">Contact Details</h2>
+            <p style="text-align: justify; margin-right: 30pt;">For more information please contact:</p>
+            <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;">Tao Yang - yangtao@mail.neu.edu.cn</li>
+        </section>
+
+        <section class="content-card">
+            <h2 class="section-title">About Shenyang</h2>
+            <!-- <p>Shenyang, a cultural metropolis blending history and modernity, is renowned as the birthplace of the Qing Dynasty. This national historical city offers magnificent architecture, traditional opera, and unique cuisine, making it an unforgettable destination for both cultural and technological exchanges.</p> -->
+            <p style="text-align: justify; margin-right: 30pt;">Shenyang is a cultural metropolis that blends history and modernity. It is a national historical and cultural city and the birthplace of Qing Dynasty. After the establishment of the People's Republic of China,Shenyang became an important heavy industry base in China, mainly focused on equipment manufacturing. It has a long history and rich cultural heritage, and is renowned for its magnificent royal architecture,brilliant opera performances, and unique cuisine. Whether its delicious food or experiencing historical culture Shenyang can bring you unforgettable experiences</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 1st International Conference on Intelligent Systems for Complex Industrial Processes</p>
+        <p>Hosted by Northeastern University | State Key Laboratory of Comprehensive Automation for Process Industries</p>
+    </footer>
+</body>
+</html>
