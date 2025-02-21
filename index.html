@@ -20,6 +20,42 @@
             background: #f8f9fa;
         }
 
+        /* 新增的导航栏样式 */
+        nav {
+            background: var(--primary-color);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: var(--accent-color);
+        }
+
         .hero-banner {
             position: relative;
             max-width: 1200px;
@@ -53,13 +89,6 @@
             font-size: 28px;
         }
 
-        /* .chair-title{
-            color: var(--primary-color);
-            border-left: 5px solid var(--accent-color);
-            padding-left: 25px;
-            margin: 30px 0;
-            font-size: 22px;
-        } */
         .chair-title {
             color: var(--primary-color);
             padding-left: 40px;
@@ -69,13 +98,13 @@
         }
 
         .chair-title::before {
-            content: "•";  /* 可以换成其他符号 */
-            color: var(--accent-color);  /* 设置符号颜色 */
-            font-size: 60px;  /* 调整符号大小 */
+            content: "•";
+            color: var(--accent-color);
+            font-size: 60px;
             position: absolute;
             left: 0;
             top: 25%;
-            transform: translateY(-50%);  /* 使符号垂直居中 */
+            transform: translateY(-50%);
         }
 
         .content-card {
@@ -120,6 +149,15 @@
 
             .chair-title{
                 font-size: 18px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li a {
+                padding: 8px 12px;
             }
         }
 
@@ -174,9 +212,66 @@
                 max-width: 300px;
             }
         }
+
+        /* 新增的 Speaker 样式 */
+        .speaker-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+
+        .speaker-photo {
+            flex: 0 0 150px;
+            text-align: center;
+        }
+
+        .speaker-photo img {
+            width: 120px;
+            height: 160px;
+            border-radius: 8px;
+        }
+
+        .speaker-info {
+            flex: 1;
+        }
+
+        .speaker-info h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .speaker-info p {
+            text-align: justify;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .speaker-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .speaker-photo {
+                flex: 0 0 auto;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- 新增的导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#organizing-committee">Organizing Committee</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#travel">Travel</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about-shenyang">About Shenyang</a></li>
+        </ul>
+    </nav>
+
     <div class="hero-banner">
         <img src="image/shenyang.jpg" alt="Shenyang City View" style="width:100%; height:auto; min-height:350px;">
         <div class="hero-text">
@@ -186,61 +281,105 @@
     </div>
 
     <div class="main-content">
-        <section class="content-card">
-            <h2 class="section-title">Welcome</h2>
-            <p style="text-align: justify; margin-right: 30pt;">The 1st International Conference on Intelligent Systems for Complex Industrial Processes will be held on June 28–29, 2025, in the historic city of Shenyang—known as “the birthplace of one imperial lineage and the capital of two dynasties.” by the State Key Laboratory of Comprehensive Automation for Process Industries at Northeastern University to advance the integrated development of automation and intelligence. More than 60 renowned experts and scholars from 17 countries and regions—including the United States, Canada, and the United Kingdom—have been invited (among them over 10 academicians, and more than 30 IEEE Fellows and IFAC Fellows).</p>
+        <!-- 为每个 section 添加 id -->
+        <section id="mission" class="content-card">
+            <h2 class="section-title">Mission</h2>
+            <p style="text-align: justify; margin-right: 30pt;">Intelligent systems have become crucial in addressing the complexities of industrial processes, especially in the context of increasing automation and data-driven decision-making. These systems are pivotal for optimizing operations, improving efficiency, and ensuring sustainability across various industries. As industrial systems grow more intricate, the need for advanced intelligent solutions that can adapt to dynamic environments and integrate diverse data sources has never been more urgent. </p>
+            <p style="text-align: justify; margin-right: 30pt;">The objective of this workshop is to offer a collaborative platform for researchers to exchange ideas and showcase the latest advancements in intelligent systems for complex industrial processes. Featuring invited talks from leading experts, the workshop aims to foster knowledge sharing and stimulate discussions on cutting-edge research in this field. We believe that this workshop will serve as an excellent opportunity for both researchers and practitioners to explore innovative solutions, furthering the development of intelligent systems and advancing the state-of-the-art in complex industrial processes. </p>
         </section>
 
-        <section class="content-card">
-            <h2 class="section-title">Conference Topics</h2>
-            <ul>
-                <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;"><strong>Industrial process intelligent sensing and modeling</strong></li>
-                <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;"><strong>Computational intelligence</strong></li>
-                <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;"><strong>AI-driven cooperative autonomous control</strong></li>
-                <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;"><strong>AI-driven industrial process operational optimal decision-making</strong></li>
-                <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;"><strong>AI-driven abnormal situation monitoring and prediction</strong></li>
-            </ul>
+        <section id="registration" class="content-card">
+            <h2 class="section-title">Registration</h2>
+            <p style="text-align: justify; margin-right: 30pt;">Updating</p>
         </section>
 
-        <section class="content-card">
+        <section id="organizing-committee" class="content-card">
             <h2 class="section-title">Organizing Committee</h2>
             <div class="committee-grid">
-                <!-- General Chair -->
-                <h3 class="chair-title">General Chair:</h3>
-                <div class="committee-row">
-                    <div class="member-card">
-                        <img src="image/chaitianyou.jpg" alt="Tianyou Chai" width="120" height="160">
-                        <div class="member-info">
-                            <!-- <strong>General Chair:</strong><br> -->
-                            Tianyou Chai, <br>China
-                        </div>
-                    </div>
-                </div>
-            
                 <!-- General Co-Chairs -->
                 <h3 class="chair-title">General Co-Chairs:</h3>
                 <div class="committee-row">
                     <div class="member-card">
-                        <img src="image/shiyang.jpg" alt="Yang Shi" width="120" height="160">
+                        <img src="image/chaitianyou.jpg" alt="Tianyou Chai" width="120" height="160">
                         <div class="member-info">
-                            <!-- <strong>General Co-Chairs:</strong><br> -->
-                            Yang Shi, <br>Canada
+                            Tianyou Chai <br>Northeastern University, China
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <img src="image/shiyang.jpg" alt="Tao Yang" width="120" height="160">
+                        <div class="member-info">
+                            Yang Shi <br>University of Victoria, Canada
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program Co-Chairs -->
+                <h3 class="chair-title">Program Co-Chairs:</h3>
+                <div class="committee-row">
+                    <div class="member-card">
+                        <img src="image/yangtao.jpg" alt="Tao Yang" width="120" height="160">
+                        <div class="member-info">
+                            Tao Yang <br>Northeastern University, China
+                        </div>
+                    </div>
+
+                    <div class="member-card">
+                        <img src="image/lizhi.jpg" alt="Zhi Li" width="120" height="160">
+                        <div class="member-info">
+                            Zhi Li <br>Northeastern University, China
                         </div>
                     </div>
                 </div>
                 <!-- 其他职位按照相同格式添加 -->
             </div>
         </section>
+
+        <section id="speakers" class="content-card">
+            <h2 class="section-title">Speakers</h2>
+            <div class="speaker-container">
+                <div class="speaker-photo">
+                    <img src="image/gaohuijun.jpg" alt="Huijun Gao">
+                    <div class="member-info">
+                        Huijun Gao <br>Harbin Institute of Technology, China
+                    </div>
+                </div>
+                <div class="speaker-info">
+                    <!-- <h3>Huijun Gao</h3> -->
+                    <p>Huijun Gao (Fellow, IEEE) received the Ph.D. degree in control science and engineering from the Harbin Institute of Technology, Harbin, China, in 2005.,From 2005 to 2007, he carried out his post-doctoral research with the Department of Electrical and Computer Engineering, University of Alberta, Edmonton, AB, Canada. Since 2004, he has been with the Harbin Institute of Technology, where he is currently a Full Professor, the Director of the Research Institute of Intelligent Control and Systems, and the Director of the Interdisciplinary Research Center. His research interests include intelligent and robust control, robotics, mechatronics, and their engineering applications.,Dr. Gao is an IEEE Industrial Electronics Society Administration Committee (AdCom) Member and a Council Member of the International Federation of Automatic Control (IFAC). He also serves as the Co-Editor-in-Chief of the IEEE Transactions on Industrial Electronics, a Senior Editor for the IEEE/ASME Transactions on Mechatronics, and an Associate Editor for Automatica, the IEEE Transactions on Cybernetics, the IEEE Transactions on Industrial Informatics, and so on.</p>
+                    <!-- <p><strong>Abstract:</strong> In this talk, Dr. Gao will discuss the latest advancements in intelligent control systems for industrial applications, focusing on the integration of AI and traditional control methods.</p> -->
+                </div>
+            </div>
+
+            <div class="speaker-container">
+                <div class="speaker-photo">
+                    <img src="image/shanjinjun.jpg" alt="Jinjun Shan">
+                    <div class="member-info">
+                        Jinjun Shan <br>York University, Canada
+                    </div>
+                </div>
+                <div class="speaker-info">
+                    <!-- <h3>Jinjun Shan</h3> -->
+                    <p>Jinjun Shan (SM’08) received the Ph.D. degree in spacecraft design from the Harbin Institute of Technology, Harbin, China, in 2002. He is currently a Full Professor of Space Engineering and the Chair of the Department of Earth and Space Science and Engineering, York University, Toronto, ON, Canada. Prior to his appointment at York, he was a Postdoctoral Fellow with the University of Toronto Institute for Aerospace Studies. His research interests include dynamics, control, and navigation. Dr. Shan was a recipient of the Alexander von Humboldt Research Fellowship and Japan Society for the Promotion of Science Invitation Fellowship in 2012. He has been a Professional Engineer in Ontario since 2007.</p>
+                    <!-- <p><strong>Abstract:</strong> Dr. Shan will present his work on nonlinear control strategies for complex industrial processes, highlighting the challenges and opportunities in this field.</p> -->
+                </div>
+            </div>
+        </section>
         
-        <section class="content-card">
+        <section id="travel" class="content-card">
+            <h2 class="section-title">Travel and Local Accommodation</h2>
+            <p style="text-align: justify; margin-right: 30pt;">Updating</p>
+        </section>
+
+        <section id="contact" class="content-card">
             <h2 class="section-title">Contact Details</h2>
             <p style="text-align: justify; margin-right: 30pt;">For more information please contact:</p>
             <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;">Tao Yang - yangtao@mail.neu.edu.cn</li>
+            <li style="text-align: justify; margin-right: 30pt; line-height: 1.5;">Zhi Li - lizhi1@mail.neu.edu.cn</li>
         </section>
 
-        <section class="content-card">
+        <section id="about-shenyang" class="content-card">
             <h2 class="section-title">About Shenyang</h2>
-            <!-- <p>Shenyang, a cultural metropolis blending history and modernity, is renowned as the birthplace of the Qing Dynasty. This national historical city offers magnificent architecture, traditional opera, and unique cuisine, making it an unforgettable destination for both cultural and technological exchanges.</p> -->
             <p style="text-align: justify; margin-right: 30pt;">Shenyang is a cultural metropolis that blends history and modernity. It is a national historical and cultural city and the birthplace of Qing Dynasty. After the establishment of the People's Republic of China,Shenyang became an important heavy industry base in China, mainly focused on equipment manufacturing. It has a long history and rich cultural heritage, and is renowned for its magnificent royal architecture,brilliant opera performances, and unique cuisine. Whether its delicious food or experiencing historical culture Shenyang can bring you unforgettable experiences</p>
         </section>
     </div>
