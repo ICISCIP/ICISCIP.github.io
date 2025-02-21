@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,6 @@
             background: #f8f9fa;
         }
 
-        /* 新增的导航栏样式 */
         nav {
             background: var(--primary-color);
             padding: 10px 20px;
@@ -159,6 +159,45 @@
             nav ul li a {
                 padding: 8px 12px;
             }
+
+            .hero-banner img {
+                min-height: 250px;
+            }
+
+            .hero-text {
+                top: 40%;
+            }
+
+            .hero-text h1 {
+                font-size: 20px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .speaker-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .speaker-photo {
+                flex: 0 0 auto;
+            }
+
+            .speaker-photo img {
+                width: 100px;
+                height: 140px;
+            }
+
+            .member-card {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .committee-row {
+                gap: 15px;
+            }
         }
 
         .committee-grid {
@@ -195,25 +234,6 @@
             line-height: 1.6;
         }
 
-        /* 响应式设计 */
-        @media (max-width: 1200px) {
-            .member-card {
-                width: 240px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .committee-row {
-                gap: 15px;
-            }
-            
-            .member-card {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-
-        /* 新增的 Speaker 样式 */
         .speaker-container {
             display: flex;
             gap: 20px;
@@ -245,21 +265,9 @@
             text-align: justify;
             margin: 10px 0;
         }
-
-        @media (max-width: 768px) {
-            .speaker-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .speaker-photo {
-                flex: 0 0 auto;
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- 新增的导航栏 -->
     <nav>
         <ul>
             <li><a href="#mission">Mission</a></li>
@@ -281,7 +289,6 @@
     </div>
 
     <div class="main-content">
-        <!-- 为每个 section 添加 id -->
         <section id="mission" class="content-card">
             <h2 class="section-title">Mission</h2>
             <p style="text-align: justify; margin-right: 30pt;">Intelligent systems have become crucial in addressing the complexities of industrial processes, especially in the context of increasing automation and data-driven decision-making. These systems are pivotal for optimizing operations, improving efficiency, and ensuring sustainability across various industries. As industrial systems grow more intricate, the need for advanced intelligent solutions that can adapt to dynamic environments and integrate diverse data sources has never been more urgent. </p>
@@ -345,9 +352,7 @@
                     </div>
                 </div>
                 <div class="speaker-info">
-                    <!-- <h3>Huijun Gao</h3> -->
                     <p>Huijun Gao (Fellow, IEEE) received the Ph.D. degree in control science and engineering from the Harbin Institute of Technology, Harbin, China, in 2005.,From 2005 to 2007, he carried out his post-doctoral research with the Department of Electrical and Computer Engineering, University of Alberta, Edmonton, AB, Canada. Since 2004, he has been with the Harbin Institute of Technology, where he is currently a Full Professor, the Director of the Research Institute of Intelligent Control and Systems, and the Director of the Interdisciplinary Research Center. His research interests include intelligent and robust control, robotics, mechatronics, and their engineering applications.,Dr. Gao is an IEEE Industrial Electronics Society Administration Committee (AdCom) Member and a Council Member of the International Federation of Automatic Control (IFAC). He also serves as the Co-Editor-in-Chief of the IEEE Transactions on Industrial Electronics, a Senior Editor for the IEEE/ASME Transactions on Mechatronics, and an Associate Editor for Automatica, the IEEE Transactions on Cybernetics, the IEEE Transactions on Industrial Informatics, and so on.</p>
-                    <!-- <p><strong>Abstract:</strong> In this talk, Dr. Gao will discuss the latest advancements in intelligent control systems for industrial applications, focusing on the integration of AI and traditional control methods.</p> -->
                 </div>
             </div>
 
@@ -359,9 +364,7 @@
                     </div>
                 </div>
                 <div class="speaker-info">
-                    <!-- <h3>Jinjun Shan</h3> -->
                     <p>Jinjun Shan (SM’08) received the Ph.D. degree in spacecraft design from the Harbin Institute of Technology, Harbin, China, in 2002. He is currently a Full Professor of Space Engineering and the Chair of the Department of Earth and Space Science and Engineering, York University, Toronto, ON, Canada. Prior to his appointment at York, he was a Postdoctoral Fellow with the University of Toronto Institute for Aerospace Studies. His research interests include dynamics, control, and navigation. Dr. Shan was a recipient of the Alexander von Humboldt Research Fellowship and Japan Society for the Promotion of Science Invitation Fellowship in 2012. He has been a Professional Engineer in Ontario since 2007.</p>
-                    <!-- <p><strong>Abstract:</strong> Dr. Shan will present his work on nonlinear control strategies for complex industrial processes, highlighting the challenges and opportunities in this field.</p> -->
                 </div>
             </div>
         </section>
